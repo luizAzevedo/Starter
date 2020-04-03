@@ -1,76 +1,15 @@
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Curso Javascript</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <button>Ok</button>
-
+      <ul></ul>
+      <input type="text" placeholder="Digite um todo" />
+      <button>Adicionar</button>
     </div>
-    <input type="text" name="nome">
-    <button onClick="adicionar()">Adicionar</button>
-    
-    <div id="app1">
-        <ul>
-
-        </ul>
-    </div>
-
-
-    <script>
-
-        var buttonElement = document.querySelector('button');
-
-        buttonElement.onclick = function () {
-
-            var containerElement = document.querySelector('#app');
-
-            var divElement = document.createElement('div');
-
-            divElement.style.width = 100;
-            divElement.style.height = 100;
-            divElement.style.backgroundColor = '#f00'
-
-            divElement.onmouseover = function () {
-                divElement.style.backgroundColor = getRandomColor();
-            };
-
-            containerElement.appendChild(divElement);
-        }
-
-        function getRandomColor() {
-            var letters = "0123456789ABCDEF";
-            var color = "#";
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-        // var newColor = getRandomColor();
-
-        var containerElement = document.querySelector('#app1 ul');
-        var nomes = ['Diego', 'Gabriel', 'Lucas'];
-
-        for (x = 0; x < nomes.length; x++) {
-            var textNode = document.createTextNode(nomes[x]);
-            var liElement = document.createElement('li');
-            liElement.appendChild(textNode);
-            containerElement.appendChild(liElement);
-        }
-
-
-        function adicionar(){
-            var inputElement = document.querySelector('input');
-            var textNode = document.createTextNode(inputElement.value);
-            var liElement = document.createElement('li');
-            liElement.appendChild(textNode);
-            containerElement.appendChild(liElement);
-            inputElement.value = '';
-        }
-    </script>
-</body>
-
+    <script src="todos.js"></script>
+  </body>
 </html>

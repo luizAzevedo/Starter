@@ -19,3 +19,5 @@ yarn add @babel/plugin-proposal-object-rest-spread -D
 yarn add webpack webpack-cli -D 
 
 yarn add babel-loader -D
+
+ yarn add webpack-dev-server -D    

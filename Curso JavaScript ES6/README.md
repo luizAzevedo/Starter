@@ -20,4 +20,8 @@ yarn add webpack webpack-cli -D
 
 yarn add babel-loader -D
 
- yarn add webpack-dev-server -D    
+yarn add webpack-dev-server -D    
+
+yarn add @babel/plugin-transform-async-to-generator -D
+
+yarn add @babel/polyfill -D
